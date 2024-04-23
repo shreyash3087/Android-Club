@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <title>Android Club | VIT Bhopal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body
+    class="overflow-hidden flex justify-center items-center bg-[#111] transition duration-500 font-['futurablack',sans-serif] text-[#dddedf] ">
+    <Loading_Panel id="loading-panel"
+        class="absolute left-0 top-0 transition-transform duration-1000 ease-in-out z-10 w-full h-full flex flex-col justify-center items-center bg-black">
+        <bg id="bg" class="absolute w-full h-full opacity-50"><img src="Images/Background.png" alt="Background"
+                class="w-full h-full"></bg>
+        <img src="Images/Logo.png" alt="Logo" class="z-20 w-24 m-2">
+        <text class="z-20 text-3xl">VIT BHOPAL</text>
+        <loading><img src="Images/Loading.gif" class="z-20 w-40 mix-blend-screen"></loading>
+    </Loading_Panel>
+
+
+    <Main_Panels class="block w-full h-screen overflow-hidden">
+        <bg class="absolute w-full h-full -z-10 top-0"><img src="Images/Background.png" alt="Background"
+                class="w-full h-full"></bg>
+        <header id="header" class="mx-2 my-4 min-[500px]:my-5">
+            <ul class="flex justify-between items-center text-2xl min-[500px]:text-3xl">
+                <current_panel_header class="flex justify-center items-center mx-2">
+                    <li id="p-1" class="px-4 py-3"><a href="#">HOME</a></li>
+                </current_panel_header>
+                <v_ham_panels class="flex">
+                    <other_panels_header class="justify-center items-center text-2xl mx-2 opacity-40 hidden">
+                        <li id="p-2" class="px-4 py-3"><a href="#">ABOUTS</a></li>
+                        <li id="p-3" class="px-4 py-3"><a href="#">EVENTS</a></li>
+                        <li id="p-4" class="px-4 py-3"><a href="#">TEAM</a></li>
+                    </other_panels_header>
+                    <img src="Images/Lines.png" alt="Lines" class="size-16">
+                </v_ham_panels>
+            </ul>
+        </header>
+        <current_panel id="current_panel"
+            class="flex items-center w-full h-screen min-h-[550px] overflow-hidden current_panel">
+            <panel1 id="panel1" class="overflow-hidden w-full h-full flex justify-center items-center">
+                <div class="w-full">
+                    <div id="panel1_content" class="p-2 transition-transform duration-[1500ms] ease-in-out">
+                        <content-heading class="block text-center text-[4.4rem] min-[500px]:text-[6.4rem] min-[1200px]:text-[9rem]">ANDROID
+                            CLUB</content-heading>
+                    </div>
+                    <vid_container id="panel1_image"
+                        class="transition-transform duration-[1500ms] ease-in-out flex flex-col justify-center items-center h-64 ">
+                        <video id="panel1_image_content" src="Images/Robot.webm"
+                            class="relative -top-[4rem] w-[29rem] min-[500px]:w-[33rem] min-[1200px]:w-[36rem] max-w-none move-animation transition-transform duration-[1500ms] ease-in-out"
+                            autoplay="true" loop></video>
+                    </vid_container>
+                </div>
+            </panel1>
+            <panel2 id="panel2"
+                class="w-full flex overflow-hidden flex-col min-[700px]:flex-row justify-center items-center absolute px-5">
+
+                <div id="panel2_content"
+                    class="transition-transform duration-[1500ms] ease-in-out  translate-x-[120%] p-5 rounded-[30px] bg-[#021723] min-[700px]:w-[50%] min-[1200px]:w-[45%] min-[1200px]:p-6">
+                    <content-heading class="block text-center text-[20px] my-2 min-[500px]:text-[28px] min-[1200px]:text-[32px]">Who Are
+                        We?</content-heading>
+                    <content-para class="block text-center text-[15px] min-[500px]:text-[19px] min-[1200px]:text-[23px] ">We at Android Club are
+                        driven to achieve
+                        excellence and solve problems while at it. Dedicated to educating and creating awareness about
+                        modern Mobile App development, we host workshops, hackathons, webinars, and all possible events
+                        under the sun, that help us build an inclusive community of like-minded people who explore and
+                        learn together. So, wear your thinking caps, put on some creativity, and let's develop some
+                        amazing apps!</content-para>
+                </div>
+                <img_container id="panel2_image"
+                    class="relative -top-2 transition-transform duration-[1500ms] ease-in-out -translate-x-[120%] flex flex-col justify-center items-center min-[700px]:w-[50%] min-[1200px]:w-[45%]">
+                    <img id="panel2_image_content" src="Images/Panel1_Robot.png" class="move-animation">
+                </img_container>
+            </panel2>
+            <panel3 id="panel3"
+                class="w-full flex absolute flex-col justify-center items-center px-10 transition-transform duration-[1500ms] ease-in-out  translate-y-[180%]">
+                <div class="panel3_heading text-3xl min-[500px]:text-4xl mb-4">Events</div>
+                <div class="wrapper w-full flex justify-center items-center">
+                    <div class="panel3container h-[350px] min-[500px]:h-[450px] flex flex-nowrap justify-center">
+                        <input type="radio" name="slide" id="c1" checked>
+                        <label for="c1"
+                            class="w-[30px] min-[500px]:w-[50px] bg-cover cursor-pointer overflow-hidden rounded-3xl mx-1 flex items-end shadow-lg"
+                            style="background-image: url('Images/Event1.png'); transition: .6s cubic-bezier(.28, -0.03, 0, .99);">
+                            <div
+                                class="text-white flex flex-nowrap bg-gradient-to-t from-[#fff2] via-[#fff2] to-transparent shadow-lg backdrop-blur-sm">
+                                <div
+                                    class="bg-gray-900 text-white rounded-full w-8 h-8 flex justify-center items-center my-[15px] mx-[5px]">
+                                    1</div>
+                                <div class="description">
+                                    <h4 class="uppercase">Event-1</h4>
+                                    <p class="hidden min-[1000px]:block text-gray-400">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c2">
+                        <label for="c2"
+                            class="w-[30px] min-[500px]:w-[50px] bg-cover cursor-pointer overflow-hidden rounded-3xl mx-1 flex items-end shadow-lg"
+                            style="background-image: url('Images/Event2.png'); transition: .6s cubic-bezier(.28, -0.03, 0, .99);">
+                            <div
+                                class="text-white flex flex-nowrap bg-gradient-to-t from-[#fff2] via-[#fff2] to-transparent shadow-lg backdrop-blur-sm">
+                                <div
+                                    class="bg-gray-900 text-white rounded-full w-8 h-8 flex justify-center items-center my-[15px] mx-[5px]">
+                                    2</div>
+                                <div class="description">
+                                    <h4 class="uppercase">Event-2</h4>
+                                    <p class="hidden min-[1000px]:block text-gray-400">Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c3">
+                        <label for="c3"
+                            class="w-[30px] min-[500px]:w-[50px] bg-cover cursor-pointer overflow-hidden rounded-3xl mx-1 flex items-end shadow-lg"
+                            style="background-image: url('Images/Event3.png'); transition: .6s cubic-bezier(.28, -0.03, 0, .99);">
+                            <div
+                                class="text-white flex flex-nowrap bg-gradient-to-t from-[#fff2] via-[#fff2] to-transparent shadow-lg backdrop-blur-sm">
+                                <div
+                                    class="bg-gray-900 text-white rounded-full w-8 h-8 flex justify-center items-center my-[15px] mx-[5px]">
+                                    3</div>
+                                <div class="description">
+                                    <h4 class="uppercase">Event-3</h4>
+                                    <p class="hidden min-[1000px]:block text-gray-400">Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c4">
+                        <label for="c4"
+                            class="w-[30px] min-[500px]:w-[50px] bg-cover cursor-pointer overflow-hidden rounded-3xl mx-1 flex items-end shadow-lg"
+                            style="background-image: url('Images/Event4.jpg'); transition: .6s cubic-bezier(.28, -0.03, 0, .99);">
+                            <div
+                                class="text-white flex flex-nowrap bg-gradient-to-t from-[#fff2] via-[#fff2] to-transparent shadow-lg backdrop-blur-sm">
+                                <div
+                                    class="bg-gray-900 text-white rounded-full w-8 h-8 flex justify-center items-center my-[15px] mx-[5px]">
+                                    4</div>
+                                <div class="description">
+                                    <h4 class="uppercase">Event-4</h4>
+                                    <p class="hidden min-[1000px]:block text-gray-400">Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </panel3>
+            <panel4 id="panel4"
+                class="flex transition-transform duration-[1500ms] ease-in-out w-screen h-[500px] absolute flex-col justify-center items-center my-2 px-5 translate-y-[180%]">
+                <div class="panel4_heading text-3xl mb-5">Meet The Team</div>
+                <div class="container">
+                    <div class="carousel-container">
+                        <div class="carousel">
+                            <div class="teamcard">
+                                <div class="card-inner">
+                                    <div class="front">
+                                        <h2>Shreyash Srivastava</h2>
+                                        <p>Web Developer</p>
+                                        <button>Know More</button>
+                                    </div>
+                                    <div class="back">
+                                        <img src="Images/waving-hand.png" alt="">
+                                        <h1>Shreyash <span>Srivastava</span></h1>
+                                        <p>I'm a web developer currently doing nothing</p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h2>2.5K+</h2>
+                                                <p>Connections</p>
+                                            </div>
+                                            <div class="col">
+                                                <h2>1K+</h2>
+                                                <p>Followers</p>
+                                            </div>
+                                            <div class="col">
+                                                <h2>125</h2>
+                                                <p>Following</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <button>follow</button>
+                                            <a href="#"><img src="Images/instagram.png" alt=""></a>
+                                            <a href="#"><img src="Images/pinterest.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teamcard">
+                                <div class="card-inner">
+                                    <div class="front front2">
+                                        <h2>Person 3</h2>
+                                        <p>Web Developer</p>
+                                        <button>Know More</button>
+                                    </div>
+                                    <div class="back">
+                                        <img src="Images/waving-hand.png" alt="">
+                                        <h1>Shreyash <span>Srivastava</span></h1>
+                                        <p>I'm a web developer currently doing nothing</p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h2>2.5K+</h2>
+                                                <p>Connections</p>
+                                            </div>
+                                            <div class="col">
+                                                <h2>1K+</h2>
+                                                <p>Followers</p>
+                                            </div>
+                                            <div class="col">
+                                                <h2>125</h2>
+                                                <p>Following</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <button>follow</button>
+                                            <a href="#"><img src="Images/instagram.png" alt=""></a>
+                                            <a href="#"><img src="Images/pinterest.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teamcard">
+                                <div class="card-inner">
+                                    <div class="front front3">
+                                        <h2>S2 Srivastava</h2>
+                                        <p>Web Developer</p>
+                                        <button>Know More</button>
+                                    </div>
+                                    <div class="back">
+                                        <img src="Images/waving-hand.png" alt="">
+                                        <h1>Shreyash <span>Srivastava</span></h1>
+                                        <p>I'm a web developer currently doing nothing</p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h2>2.5K+</h2>
+                                                <p>Connections</p>
+                                            </div>
+                                            <div class="col">
+                                                <h2>1K+</h2>
+                                                <p>Followers</p>
+                                            </div>
+                                            <div class="col">
+                                                <h2>125</h2>
+                                                <p>Following</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <button>follow</button>
+                                            <a href="#"><img src="Images/instagram.png" alt=""></a>
+                                            <a href="#"><img src="Images/pinterest.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="next"><img src="Images/Right.png"></button>
+                <button class="prev"><img src="Images/Left.png"></button>
+            </panel4>
+            <panel_switch_container
+                class="absolute bottom-0 my-3 p-3 h-30 w-fit flex flex-col justify-center items-center">
+                <panel_switch_1 id="switch1" class="w-8 h-8 m-2 rounded-full bg-[#D5FFFF] shadow-custom">
+                </panel_switch_1>
+                <panel_switch_2 id="switch2" class="w-8 h-8 m-2 rounded-full bg-white"></panel_switch_2>
+                <panel_switch_3 id="switch3" class="w-8 h-8 m-2 rounded-full bg-white"></panel_switch_3>
+                <panel_switch_4 id="switch4" class="w-8 h-8 m-2 rounded-full bg-white"></panel_switch_4>
+            </panel_switch_container>
+            <message
+                id='scrollText' class="absolute bottom-3 p-4 right-0 rounded-l-xl text-slate-600 h-10 flex justify-center items-center bg-white">
+                Scroll
+            </message>
+        </current_panel>
+    </Main_Panels>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousel = document.querySelector('.carousel');
+            const teamCards = document.querySelectorAll('.teamcard');
+            const totalTeamCards = teamCards.length;
+            console.log(totalTeamCards)
+            let currentIndex = 0;
+
+            function showCard(index) {
+                if (index < 0) {
+                    index = totalTeamCards - 1;
+                } else if (index >= totalTeamCards) {
+                    index = 0;
+                }
+
+                carousel.style.transform = `translateX(-${index * 100}%)`;
+                currentIndex = index;
+            }
+
+            document.querySelector('.prev').addEventListener('click', function () {
+                showCard(currentIndex - 1);
+            });
+
+            document.querySelector('.next').addEventListener('click', function () {
+                showCard(currentIndex + 1);
+            });
+        });
+
+
+        var animplaying = true;
+        var panelCount = 1;
+
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById('loading-panel').classList.add('transform', '-translate-y-full');
+            }, 4000);
+        };
+        function panel1outMovement() {
+            animplaying = false;
+            document.getElementById("panel1_content").classList.add('-translate-x-[120%]');
+            document.getElementById("panel1_image_content").style.animationPlayState = "paused";
+
+            setTimeout(function () {
+                document.getElementById("panel1_image").classList.add('rotate-45');
+            }, 300)
+            setTimeout(function () {
+                document.getElementById("panel1_image").classList.add('translate-x-[120%]');
+            }, 1000)
+            setTimeout(function () {
+                document.getElementById("panel1_image").classList.remove('rotate-45');
+                document.getElementById("panel1_image").classList.add('-rotate-[25deg]');
+            }, 2000)
+            setTimeout(function () {
+                animplaying = true;
+            }, 2500)
+        }
+        function panel1inMovement() {
+            animplaying = false;
+
+            document.getElementById('panel1_content').classList.remove('-translate-x-[120%]');
+            document.getElementById("panel1_image").classList.remove('translate-x-[120%]');
+
+            setTimeout(function () {
+                document.getElementById("panel1_image_content").style.animationPlayState = "running";
+            }, 1000)
+            setTimeout(function () {
+                document.getElementById("panel1_image").classList.remove('-rotate-[25deg]');
+            }, 1200)
+            setTimeout(function () {
+                animplaying = true;
+            }, 1500)
+        }
+        function panel2outMovement() {
+            document.getElementById('panel2_content').classList.add('translate-x-[120%]');
+            document.getElementById("panel2_image").classList.add('-translate-x-[120%]');
+        }
+        function panel2inMovement() {
+            document.getElementById('panel2_content').classList.remove('translate-x-[120%]');
+            document.getElementById("panel2_image").classList.remove('-translate-x-[120%]');
+        }
+        function panel3inMovement() {
+            document.getElementById("panel3").classList.remove('translate-y-[180%]');
+        }
+        function panel3outMovement() {
+            document.getElementById("panel3").classList.add('translate-y-[180%]');
+        }
+        function panel4inMovement() {
+            document.getElementById("panel4").classList.remove('translate-y-[180%]');
+        }
+        function panel4outMovement() {
+            document.getElementById("panel4").classList.add('translate-y-[180%]');
+        }
+        setPanelHeight();
+        var startY;
+
+        document.getElementById('current_panel').addEventListener('touchstart', function (event) {
+            startY = event.touches[0].clientY;
+        });
+        var swiped = 0
+        var scrolled = 0
+        document.getElementById('current_panel').addEventListener('touchmove', function (event) {
+            event.preventDefault();
+            var deltaY = event.touches[0].clientY - startY;
+            if (deltaY > 0) {
+                swiped = -1
+                scrolled = -1
+            } else if (deltaY < 0) {
+                swiped = 1
+                scrolled = 1
+            }
+            panelChange();
+        });
+        var maxScrollPosition = 500;
+
+        window.addEventListener('wheel', function (event) {
+            if (event.deltaY > 0) {
+                scrolled = 1;
+                swiped = 1
+            }
+            else if (event.deltaY < 0) {
+                scrolled = -1;
+                swiped = -1
+            }
+            panelChange()
+        });
+        function panelChange() {
+            if (((scrolled > 0) || swiped > 0) && (animplaying)) {
+                if (panelCount == 1) {
+                    panel1outMovement();
+                    setTimeout(function () {
+                        var p1Element = document.getElementById("p-1");
+                        p1Element.parentNode.removeChild(p1Element);
+                        var otherPanelsHeader = document.querySelector("other_panels_header");
+                        otherPanelsHeader.insertBefore(p1Element, otherPanelsHeader.firstChild);
+                        var p2Element = document.getElementById("p-2");
+                        p2Element.parentNode.removeChild(p2Element);
+                        var currentPanelHeader = document.querySelector("current_panel_header");
+                        currentPanelHeader.insertBefore(p2Element, currentPanelHeader.firstChild);
+
+                        document.getElementById("switch1").classList.remove('bg-[#D5FFFF]', 'shadow-custom');
+                        document.getElementById("switch1").classList.add('bg-white');
+                        document.getElementById("switch2").classList.remove('bg-white');
+                        document.getElementById("switch2").classList.add('bg-[#D5FFFF]', 'shadow-custom');
+                        panel2inMovement();
+                    }, 1500)
+                } else if (panelCount == 2) {
+                    animplaying = false;
+                    panel2outMovement();
+                    setTimeout(function () {
+                        var p2Element = document.getElementById("p-2");
+                        p2Element.parentNode.removeChild(p2Element);
+                        var otherPanelsHeader = document.querySelector("other_panels_header");
+                        otherPanelsHeader.insertBefore(p2Element, otherPanelsHeader.firstChild);
+                        var p3Element = document.getElementById("p-3");
+                        p3Element.parentNode.removeChild(p3Element);
+                        var currentPanelHeader = document.querySelector("current_panel_header");
+                        currentPanelHeader.insertBefore(p3Element, currentPanelHeader.firstChild);
+
+                        document.getElementById("switch2").classList.remove('bg-[#D5FFFF]', 'shadow-custom');
+                        document.getElementById("switch2").classList.add('bg-white');
+                        document.getElementById("switch3").classList.remove('bg-white');
+                        document.getElementById("switch3").classList.add('bg-[#D5FFFF]', 'shadow-custom');
+                        panel3inMovement();
+                        animplaying = true;
+                    }, 1500)
+                } else if (panelCount == 3) {
+                    animplaying = false;
+                    panel3outMovement();
+                    setTimeout(function () {
+                        var p3Element = document.getElementById("p-3");
+                        p3Element.parentNode.removeChild(p3Element);
+                        var otherPanelsHeader = document.querySelector("other_panels_header");
+                        otherPanelsHeader.insertBefore(p3Element, otherPanelsHeader.firstChild);
+                        var p4Element = document.getElementById("p-4");
+                        p4Element.parentNode.removeChild(p4Element);
+                        var currentPanelHeader = document.querySelector("current_panel_header");
+                        currentPanelHeader.insertBefore(p4Element, currentPanelHeader.firstChild);
+
+                        document.getElementById("switch3").classList.remove('bg-[#D5FFFF]', 'shadow-custom');
+                        document.getElementById("switch3").classList.add('bg-white');
+                        document.getElementById("switch4").classList.remove('bg-white');
+                        document.getElementById("switch4").classList.add('bg-[#D5FFFF]', 'shadow-custom');
+                        panel4inMovement();
+                        animplaying = true;
+                    }, 1500)
+                }
+                panelCount = panelCount + 1;
+            } else if (((scrolled < 0) || swiped < 0) && (animplaying)) {
+                if (panelCount == 2) {
+                    animplaying = false;
+                    panel2outMovement()
+                    setTimeout(function () {
+                        var p1Element = document.getElementById("p-1");
+                        p1Element.parentNode.removeChild(p1Element);
+                        var currentPanelHeader = document.querySelector("current_panel_header");
+                        currentPanelHeader.insertBefore(p1Element, currentPanelHeader.firstChild);
+                        var p2Element = document.getElementById("p-2");
+                        p2Element.parentNode.removeChild(p2Element);
+                        var otherPanelsHeader = document.querySelector("other_panels_header");
+                        otherPanelsHeader.insertBefore(p2Element, otherPanelsHeader.firstChild);
+
+                        document.getElementById("switch2").classList.remove('bg-[#D5FFFF]', 'shadow-custom');
+                        document.getElementById("switch2").classList.add('bg-white');
+                        document.getElementById("switch1").classList.remove('bg-white');
+                        document.getElementById("switch1").classList.add('bg-[#D5FFFF]', 'shadow-custom');
+                        panel1inMovement();
+                    }, 1000)
+                }
+                else if (panelCount == 3) {
+                    animplaying = false;
+                    panel3outMovement()
+                    setTimeout(function () {
+                        var p2Element = document.getElementById("p-2");
+                        p2Element.parentNode.removeChild(p2Element);
+                        var currentPanelHeader = document.querySelector("current_panel_header");
+                        currentPanelHeader.insertBefore(p2Element, currentPanelHeader.firstChild);
+                        var p3Element = document.getElementById("p-3");
+                        p3Element.parentNode.removeChild(p3Element);
+                        var otherPanelsHeader = document.querySelector("other_panels_header");
+                        otherPanelsHeader.insertBefore(p3Element, otherPanelsHeader.firstChild);
+
+                        document.getElementById("switch3").classList.remove('bg-[#D5FFFF]', 'shadow-custom');
+                        document.getElementById("switch3").classList.add('bg-white');
+                        document.getElementById("switch2").classList.remove('bg-white');
+                        document.getElementById("switch2").classList.add('bg-[#D5FFFF]', 'shadow-custom');
+                        panel2inMovement();
+                        animplaying = true;
+                    }, 1500)
+                }
+                else if (panelCount == 4) {
+                    animplaying = false;
+                    panel4outMovement()
+                    setTimeout(function () {
+                        var p3Element = document.getElementById("p-3");
+                        p3Element.parentNode.removeChild(p3Element);
+                        var currentPanelHeader = document.querySelector("current_panel_header");
+                        currentPanelHeader.insertBefore(p3Element, currentPanelHeader.firstChild);
+                        var p4Element = document.getElementById("p-4");
+                        p4Element.parentNode.removeChild(p4Element);
+                        var otherPanelsHeader = document.querySelector("other_panels_header");
+                        otherPanelsHeader.insertBefore(p4Element, otherPanelsHeader.firstChild);
+
+                        document.getElementById("switch4").classList.remove('bg-[#D5FFFF]', 'shadow-custom');
+                        document.getElementById("switch4").classList.add('bg-white');
+                        document.getElementById("switch3").classList.remove('bg-white');
+                        document.getElementById("switch3").classList.add('bg-[#D5FFFF]', 'shadow-custom');
+                        panel3inMovement();
+                        animplaying = true;
+                    }, 1500)
+                }
+                if (panelCount > 0) {
+                    panelCount = panelCount - 1;
+                }
+                else {
+                    panelCount = 0;
+                }
+            }
+        }
+
+
+        function setPanelHeight() {
+            var currentPanel = document.getElementById('current_panel');
+            var currentPanelHeight = 0
+            if (currentPanel) {
+                var header = document.getElementById('header');
+                var headerHeight = header.offsetHeight + parseInt(window.getComputedStyle(header).marginTop) + parseInt(window.getComputedStyle(header).marginBottom);
+                currentPanel.classList.remove("h-screen");
+                currentPanelHeight = `calc(100vh - ${headerHeight}px)`
+                currentPanel.style.height = currentPanelHeight;
+            }
+        }
+
+        function moveImageAboveContent() {
+            var panel2Content = document.getElementById("panel2_content");
+            var panel2Image = document.getElementById("panel2_image");
+            var panel2 = document.getElementById("panel2");
+
+            panel2.insertBefore(panel2Image, panel2Content);
+        }
+
+        function moveContentAboveImage() {
+            var panel2Content = document.getElementById("panel2_content");
+            var panel2Image = document.getElementById("panel2_image");
+            var panel2 = document.getElementById("panel2");
+
+            panel2.insertBefore(panel2Content, panel2Image);
+        }
+        var count = 1
+        function changeScrollText(){
+            if (count % 2 == 0){
+                document.getElementById('scrollText').innerHTML = 'Swipe';
+            }
+            else{
+                document.getElementById('scrollText').innerHTML = 'Scroll';
+            }
+            count ++;
+        }
+        function handleWidthChange(mediaQuery) {
+            if (mediaQuery.matches) {
+                moveImageAboveContent();
+            } else {
+                moveContentAboveImage();
+                changeScrollText();
+            }
+        }
+        var mediaQuery = window.matchMedia("(min-width: 700px)");
+        handleWidthChange(mediaQuery);
+
+        mediaQuery.addListener(handleWidthChange);
+    </script>
+</body>
+
+</html>
